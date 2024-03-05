@@ -12,13 +12,15 @@ public class classroom {
         queue.add("1");
 
         // Print binary numbers using level order traversal
-        while (n-- > 0) {
+        while (!queue.isEmpty() && n>0) {
             String curr = queue.remove();
             System.out.print(curr+" ");
 
             // Append '0' and '1' to the current number and enqueue
             queue.add(curr + "0");
             queue.add(curr + "1");
+
+            n--;
         }
     }
 
